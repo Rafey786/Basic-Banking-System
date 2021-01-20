@@ -1,0 +1,22 @@
+body, html {
+    height: 100%;
+  }
+  .bg {
+    background-image: url("bg_img1.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #200c47;
+  }
+  .text{
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: #200c47;
+    /* opacity: .6; */
+    padding: 5px;
+  }
+  a:hover{
+    background-color: #b09db8;
+  }
