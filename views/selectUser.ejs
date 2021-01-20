@@ -1,0 +1,166 @@
+<%- include ('./partials/header') %>
+<%- include ('./partials/navbar') %>
+
+<div style="background: rgba(73, 16, 207, 0.2)"><br/>
+    <div class="text-center" style="color: #c58c1b;">
+      <h1>MOHD RAFEY</h1>
+      <h3>TOTAL BANK BALANCE  Rs.<span id="myBal">20000</span></h3>
+
+      <button class="btn" style=" background: linear-gradient(to right,#ff105f,#ffad06); border: none; border-radius: 10px; " data-toggle="modal" data-target="#transferMoney">Tranfer Money</button>
+      <button class="btn" id="btn_history" style=" background: linear-gradient(to right,#ff105f,#ffad06); border: none; border-radius: 10px; " data-toggle="modal" data-target="#transactionHistory">Transaction History</button>
+    </div>
+
+  <div class="modal fade" id="transferMoney">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4>Tranfer Money</h4>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div>
+                      <input type="text" id="selectName" class="form-control" placeholder=" Select a Username" aria-label="Username" required list="nameList">
+                      <datalist id="nameList">
+                          <option>akram</option>
+                          <option>aquib</option>
+                          <option>arshad</option>
+                          <option>meraj</option>
+                          <option>vedbrat</option>
+                          <option>vikash</option>
+                          <option>ankur</option>
+                          <option>asif</option>
+                          <option>adnan</option>
+                          <option>farhan</option>
+                      </datalist>
+                  </div>
+                  <br/>
+                  <div>
+                      <input type="text" id="Amount" class="form-control" placeholder=" Enter Amount to transfer" aria-label="Amount" required>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn" style="background: linear-gradient(to right,#ff105f,#ffad06);" data-dismiss="modal">Close</button>
+              <button type="button" onclick="transferMoney()" class="btn" style="background: linear-gradient(to right,#ff105f,#ffad06);" data-dismiss="modal">Transfer Money</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="transactionHistory">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Transaction History</h4>
+            </div>
+            <div class="modal-body">
+                <ol id="transaction-history"></ol>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" style="background: linear-gradient(to right,#ff105f,#ffad06);" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div><br/>
+  <h1 class="text-center" style="color: rgb(58, 11, 121);">USERS DETAIL</h1><br/>
+  <div class="container">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr class="table-danger">
+                    <th>SR. No.</th>
+                    <th>Account Holder</th>
+                    <th>Gmail-ID</th>
+                    <th>Current Balance(in Rs.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-light">
+                    <td>1</td>
+                    <td>Akram</td>
+                    <td>akram@gmail.com</td>
+                    <td>
+                        <p id="akramBankBalance">8000</p>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>2</td>
+                    <td>Aquib</td>
+                    <td>aquib@gmail.com</td>
+                    <td>
+                        <p id="aquibBankBalance">12000</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td>3</td>
+                    <td>Arshad</td>
+                    <td>arshad@gmail.com</td>
+                    <td>
+                        <p id="arshadBankBalance">15000</p>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>4</td>
+                    <td>Meraj</td>
+                    <td>meraj@gmail.com</td>
+                    <td>
+                        <p id="merajBankBalance">18000</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td>5</td>
+                    <td>Vedbrat</td>
+                    <td>vedbrat@gmail.com</td>
+                    <td>
+                        <p id="vedbratBankBalance">7000</p>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>6</td>
+                    <td>Vikash</td>
+                    <td>vikash@gmail.com</td>
+                    <td>
+                        <p id="vikashBankBalance">5000</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td>7</td>
+                    <td>Ankur</td>
+                    <td>ankur@gmail.com</td>
+                    <td>
+                        <p id="ankurBankBalance">6000</p>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>8</td>
+                    <td>Asif</td>
+                    <td>asif@gmail.com</td>
+                    <td>
+                        <p id="asifBankBalance">10000</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td>9</td>
+                    <td>Adnan</td>
+                    <td>adnan@gmail.com</td>
+                    <td>
+                        <p id="adnanBankBalance">4000</p>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>10</td>
+                    <td>Farhan</td>
+                    <td>farhan@gmail.com</td>
+                    <td>
+                        <p id="farhanBankBalance">13000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<%- include ('./partials/footer') %>
